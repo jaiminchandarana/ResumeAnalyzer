@@ -39,28 +39,20 @@ def main():
             
             prompt = PromptTemplate.from_template(f"""
                 ###NO PREAMBLE
-                You are an expert HR professional and ATS system evaluator.
+                You are an expert resume reviewer with years of experience in HR and recruitment.
+                Please analyze this resume and provide constructive feedback.
+                Focus on the following aspects:
+                1. Content clarity and impact
+                2. Skills presentation
+                3. Experience description
+                4. Specific improvements for the job role: {job_role}
 
-                Analyze the resume for the following:
-                1. Content clarity and overall impact.
-                2. Presentation and structure of skills.
-                3. Relevance and clarity of work experience.
-                4. Tailoring for the specific job role: **{job_role}**.
-                5. ATS Compatibility:
-                   - Use of standard section headers like "Education", "Experience", etc.
-                   - Use of plain formatting (no tables or images).
-                   - Presence of keywords relevant to the job role.
-                   - Bullet points and consistent structure.
-                   - Proper use of fonts, headings, and no graphics.
-                
-                Resume Content:
+                Resume content:
                 {file_content}
 
-                Please return your analysis in the following format:
-                - Section-by-section feedback.
-                - ATS Compatibility Score (out of 100).
-                - Resume Optimization Score for the job role (out of 100).
-                - Final Recommendation Summary.
+                Please provide your analysis in a clear, structured format with:
+                - Detailed feedback on each of the above points.
+                - A final **Resume Score** as a percentage (Like, 75%) indicating how well this resume is optimized for the role of **{job_role}**.
                 """)
 
             
