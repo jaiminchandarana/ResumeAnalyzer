@@ -43,16 +43,18 @@ def main():
                 Please analyze this resume and provide constructive feedback.
                 Focus on the following aspects:
                 1. Content clarity and impact
-                2. skills presentation
+                2. Skills presentation
                 3. Experience description
-                4. specific improvements for {job_role}
-                
+                4. Specific improvements for the job role: {job_role}
+
                 Resume content:
                 {file_content}
-                
-                Please provide your analysis in a clear, structured format with specific recommandations in each section. 
-                ###NO PREAMBLE
-            """)
+
+                Please provide your analysis in a clear, structured format with:
+                - Detailed feedback on each of the above points.
+                - A final **Resume Score** as a percentage (Like, 75%) indicating how well this resume is optimized for the role of **{job_role}**.
+                """)
+
             
             chain = prompt | model
             responce = chain.invoke({file_content : job_role})
