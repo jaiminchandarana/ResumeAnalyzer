@@ -39,7 +39,7 @@ def main():
             
             prompt = PromptTemplate.from_template(f"""
                 ###NO PREAMBLE
-                You are an expert resume reviewer with years of experience in HR and recruitment.
+                You are an expert resume reviewer with years of experience in HR and recruitment with ats checker.
                 Please analyze this resume and provide constructive feedback.
                 Focus on the following aspects:
                 1. Content clarity and impact
@@ -52,7 +52,7 @@ def main():
 
                 Please provide your analysis in a clear, structured format with:
                 - Detailed feedback on each of the above points.
-                - A final **Resume Score** as a percentage (Like, 75%) indicating how well this resume is optimized for the role of **{job_role}**.
+                - A final **Resume Score** as a percentage (Like, 75%) indicating how well this resume is optimized for the role of **{job_role}** and other for ats.
                 """)
 
             
