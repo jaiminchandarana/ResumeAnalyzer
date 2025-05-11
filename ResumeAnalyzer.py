@@ -9,7 +9,7 @@ def main():
     st.title("AI Resume Analyzer")
     st.markdown("Upload your resume and get insights as per your requirements !!")
     uploaded_resume = st.file_uploader("Upload your resume(PDF)",type=["pdf"])
-    job_role = st.text_input("Enter the job role you are targetting.(Optional)")
+    job_role = st.text_input("Enter the job role you are targetting.")
     analyze = st.button("Analyze Resume.")
     
     def extract_text_from_pdf(pdf_file):
@@ -23,7 +23,7 @@ def main():
         if uploaded_resume.type == "application/pdf":
             return extract_text_from_pdf(io.BytesIO(uploaded_resume.read()))
     
-    if analyze and uploaded_resume:
+    if analyze and uploaded_resume and job_role:
         try:
             file_content = extract_text_from_file(uploaded_resume)
             
@@ -45,7 +45,7 @@ def main():
                 1. Content clarity and impact
                 2. skills presentation
                 3. Experience description
-                4. specific improvements for {job_role if job_role else 'general job applications'}
+                4. specific improvements for {job_role}
                 
                 Resume content:
                 {file_content}
