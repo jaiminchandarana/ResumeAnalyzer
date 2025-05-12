@@ -50,9 +50,7 @@ def main():
                 Resume content:
                 {file_content}
 
-                Please provide your analysis in a clear, structured format with:
-                - Detailed feedback on each of the above points.
-                - A final **Resume Score** as a percentage (Like, 75%) indicating how well this resume is optimized for the role of **{job_role}**.
+                Please provide your analysis in a clear, structured format.
                 """)
 
             
