@@ -3,7 +3,7 @@ import PyPDF2
 import io
 from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
-Grok_api_key = "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"
+Grok_api_key = "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"
 def main():
     st.set_page_config(page_title="AI Resume Analyzer",layout="centered")
     st.title("AI Resume Analyzer")
